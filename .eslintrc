@@ -1,0 +1,109 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "jquery": true
+  },
+  "rules": {
+    // http://eslint.org/docs/rules/ //
+    // 0 = disable //
+    // 1 = warning //
+    // 2 = error   //
+
+    ///// Possible Errors /////
+    "comma-dangle": [2, "never"],                             // disallow or enforce trailing commas
+    "no-console": 1,                                          // disallow use of console
+    "no-debugger": 2,                                         // disallow use of debugger
+    "no-empty": 2,                                            // disallow empty statements
+    "no-extra-parens": 2,                                     // disallow unnecessary parentheses
+    "no-extra-semi": 2,                                       // disallow unnecessary semicolons
+    "no-dupe-args": 2,                                        // disallow duplicate arguments in functions
+    "no-dupe-keys": 2,                                        // disallow duplicate keys when creating object literals
+    "no-duplicate-case": 2,                                   // disallow a duplicate case label
+    "no-invalid-regexp": 2,                                   // disallow invalid regular expression strings in the RegExp constructor
+    "no-sparse-arrays": 1,                                    // disallow sparse arrays
+    "no-unreachable": 2,                                      // disallow unreachable statements after a return, throw, continue, or break statement
+    "valid-jsdoc": [1, {
+        "requireReturn": false
+    }], // ensure JSDoc comments are valid
+
+    ///// Best Practices /////
+    "block-scoped-var": 1,      // treat var statements as if they were block scoped
+    "complexity": [1, 10],      // specify the maximum cyclomatic complexity allowed in a program
+    "curly": 2,                 // specify curly brace conventions for all control statements
+    "eqeqeq": 1,                // require the use of === and !==
+    "no-alert": 1,              // disallow the use of alert, confirm, and prompt
+    "no-else-return": 1,        // disallow else after a return in an if
+    "no-eq-null": 2,            // disallow comparisons to null without a type-checking operator
+    "no-eval": 1,               // disallow use of eval()
+    "no-multi-spaces": 1,       // disallow use of multiple spaces
+    "no-unused-expressions": 0, // disallow usage of expressions in statement position
+    "no-self-compare": 2,       // disallow comparisons where both sides are exactly the same
+    "wrap-iife": [1, "inside"], // require immediate function invocation to be wrapped in parentheses
+
+    ///// Variables /////
+    "no-use-before-define": "nofunc", // disallow use of variables before they are defined
+
+    ///// Stylistic Issues /////
+    "brace-style": [2, "1tbs"],                              // enforce one true brace style
+    "camelcase": [2, "always"],                              // require camel case names
+    "comma-spacing": [1, {"before": false, "after": true}],  // enforce spacing before and after comma
+    "func-style": [1, "expression"],                         // enforces use of function declarations or expressions
+    "indent": [1, 2],                                        // this option sets a specific tab width for your code
+    "new-cap": 2,                                            // require a capital letter for constructors
+    "max-nested-callbacks": [1, 5],                          // specify the maximum depth callbacks can be nested
+    "no-lonely-if": 2,                                       // disallow if as the only statement in an else block
+    "no-mixed-spaces-and-tabs": 1,                           // disallow mixed spaces and tabs for indentation
+    "no-nested-ternary": 2,                                  // disallow nested ternary expressions
+    "no-underscore-dangle": 0,                               // disallow dangling underscores in identifiers
+    "no-ternary": 1,                                         // disallow the use of ternary operators
+    "quotes": [2, "single", "avoid-escape"],                 // specify whether backticks, double or single quotes should be used
+    "semi": [2, "always"],                                   // require or disallow use of semicolons instead of ASI
+    "semi-spacing": [2, {"before": false, "after": true}],   // enforce spacing before and after semicolons
+    "space-after-keywords": [2, "always"],                   // require a space after certain keywords
+    "space-in-parens": [2, "never"],                         // require or disallow spaces inside parentheses
+    "space-unary-ops": 2,                                    // Require or disallow spaces before/after unary operators
+
+    ///// Node.js /////
+    "handle-callback-err": 2,       // enforces error handling in callbacks
+    "no-mixed-requires": [2, true], // disallow mixing regular variable and require declarations
+    "no-new-require": 2,            // disallow use of new operator with the require function
+    "no-path-concat": 1,            // disallow string concatenation with __dirname and __filename
+    "no-process-exit": 0,           // disallow process.exit()
+
+    ///// Legacy /////
+    "max-depth": [1, 4],    // specify the maximum depth that blocks can be nested
+    "max-len": [1, 160, 2], // specify the maximum length of a line in your program
+    "max-params": [1, 4],   // limits the number of parameters that can be used in the function declaration
+
+    ///// Strict Mode /////
+    "strict": 0 // controls location of Use Strict Directives
+
+  },
+  "globals": {
+    "_": true,
+    "ga": true,
+    "_googCsa": true,
+    "ga_id": true,
+    "ga_cid": true,
+    "Xcalibrate": true,
+    "enquire": true,
+    "VideoGallery": true,
+    "dropdownAccordion": true,
+    "Cta": true,
+    "LikeAndFavourites": true,
+    "productFilterBtn": true,
+    "levelRating": true,
+    "Rating": true,
+    "Starproduct": true,
+    "WEBSERVICES": true,
+    "alertify": true,
+    "singleton": true,
+    "app": true,
+    "windows": true,
+    "Event": true,
+    "XMLHttpRequest": true,
+    "XDomainRequest": true,
+    "EventTarget": true
+  }
+}

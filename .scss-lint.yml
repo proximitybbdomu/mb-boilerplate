@@ -1,0 +1,208 @@
+# Default application configuration that all configurations inherit from.
+
+linters:
+
+  # Reports when a BEM selector contains more elements than a configurable maximum number.
+  BemDepth:
+    max_elements: 2
+
+  # Prefer the terser border: 0 over border: none.
+  BorderZero:
+    enabled: true
+
+  # Prefer hexadecimal color codes over color keywords.
+  ColorKeyword:
+    enabled: true
+
+  ColorVariable:
+    enabled: false # To enable at the end of scsslint correction DD
+
+  # Prefer // comments over /* ... */.
+  Comment:
+    enabled: false
+
+  # Reports @debug statements (which you probably left behind accidentally).
+  DebugStatement:
+    enabled: true
+
+  # Rule sets should be ordered
+  DeclarationOrder:
+    enabled: true
+
+  # Reports when you define the same property twice in a single rule set.
+  DuplicateProperty:
+    enabled: true
+
+  # Place @else statements on the same line as the preceding curly brace.
+  ElsePlacement:
+    enabled: true
+    style: same_line # or 'new_line'
+
+  # Separate rule, function, and mixin declarations with empty lines.
+  EmptyLineBetweenBlocks:
+    enabled: false # Maybe to enable DD
+    ignore_single_line_blocks: true
+
+  # Reports when you have an empty rule set.
+  EmptyRule:
+    enabled: true
+
+  # FinalNewline
+  FinalNewline:
+    enabled: true
+    present: true
+
+  # You can specify whether you prefer shorthand or long-form hexadecimal colors by setting the style option to short or long, respectively.
+  HexLength:
+    enabled: true
+    style: short # or 'long'
+
+  # Checks if hexadecimal colors are written in lowercase. You can specify which case with the style option.
+  HexNotation:
+    enabled: true
+    style: lowercase # or 'uppercase'
+
+  # HexValidation
+  HexValidation:
+    enabled: true
+
+  # Avoid using ID selectors.
+  IdSelector:
+    enabled: true
+
+  # Avoid using !important in properties. It is usually indicative of a misunderstanding of CSS specificity and can lead to brittle code.
+  ImportantRule:
+    enabled: false # To enable in the future DD
+
+  Indentation:
+    enabled: true
+    character: space # or 'tab'
+    width: 2
+
+  # Don't write leading zeros for numeric values with a decimal point.
+  LeadingZero:
+    enabled: true
+    style: exclude_zero # or 'include_zero'
+
+  # Reports when you define the same selector twice in a single sheet.
+  MergeableSelector:
+    enabled: true
+    force_nesting: true
+
+  # Functions, mixins, variables, and placeholders should be declared with all lowercase letters and hyphens instead of underscores.
+  NameFormat:
+    enabled: true
+    convention: hyphenated_lowercase # or 'BEM', or a regex pattern
+
+  # Avoid nesting selectors too deeply.
+  NestingDepth:
+    enable: true
+    max_depth: 3
+
+  # Always use placeholder selectors in @extend.
+  PlaceholderInExtend:
+    enabled: false # To enable in a next stage SP
+
+  PropertySortOrder:
+    enabled: false # To enable in a next stage DD
+
+  # Reports when you use an unknown CSS property (ignoring vendor-prefixed properties).
+  PropertySpelling:
+    enabled: true
+    extra_properties: []
+
+  PropertyUnits:
+    global: ['px', 'rem', '%'] # Allow relative units globally
+
+  # Avoid qualifying elements in selectors (also known as "tag-qualifying").
+  QualifyingElement:
+    enable: true
+
+  # Don't write selectors with a depth of applicability greater than 3.
+  SelectorDepth:
+    enabled: true
+    max_depth: 3
+
+  # It is good practice to choose a convention for naming selectors.
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_BEM
+
+  # Prefer the shortest shorthand form possible for properties that support it.
+  Shorthand:
+    enabled: true
+
+  # Properties within rule sets should each reside on their own line.
+  SingleLinePerProperty:
+    enabled: true
+
+  # Split selectors onto separate lines after each comma.
+  SingleLinePerSelector:
+    enabled: true
+
+  # Commas in lists should be followed by a space.
+  SpaceAfterComma:
+    enabled: true
+
+  # Properties should be formatted with a single space separating the colon from the property's value.
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: one_space # or 'no_space', or 'at_least_one_space', or 'aligned'
+
+  # Properties should be formatted with no space between the name and the colon.
+  SpaceAfterPropertyName:
+    enabled: true
+
+  # Variables should be formatted with no space between the name and the colon.
+  SpaceAfterVariableName:
+    enabled: true
+
+  # Opening braces should be preceded by a single space.
+  SpaceBeforeBrace:
+    enabled: true
+    allow_single_line_padding: false
+
+  # Parentheses should not be padded with spaces.
+  SpaceBetweenParens:
+    enabled: true
+    spaces: 0
+
+  # String literals should be written with single quotes unless using double quotes would save on escape characters.
+  StringQuotes:
+    enabled: true
+    style: single_quotes # or double_quotes
+
+  # Property values; @extend, @include, and @import directives; and variable declarations should always end with a semicolon.
+  TrailingSemicolon:
+    enabled: true
+
+  # Don't write trailing zeros for numeric values with a decimal point.
+  TrailingZero:
+    enabled: true
+
+  # Numeric values should not contain unnecessary fractional portions.
+  UnnecessaryMantissa:
+    enabled: true
+
+  # URLs should not contain protocols or domain names.
+  UrlFormat:
+    enabled: true
+
+  # URLs should always be enclosed within quotes.
+  UrlQuotes:
+    enabled: true
+
+  # Properties, like color and font, are easier to read and maintain when defined using variables rather than literals.
+  VariableForProperty:
+    enabled: true
+    properties:
+      - color
+      - font
+      - font-size
+
+  # Omit length units on zero values.
+  ZeroUnit:
+    enabled: true
+
+  Compass::*:
+    enabled: false

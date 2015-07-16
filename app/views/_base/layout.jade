@@ -1,0 +1,19 @@
+include variables
+include head
+
+body
+
+  include mixins
+
+  //- Block content
+  block content
+
+    .wrapper
+      .wrapper__content
+        include header
+
+        main(role="main")
+
+          block main
+
+        include footer

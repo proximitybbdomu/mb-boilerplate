@@ -1,6 +1,5 @@
-/**
- * Module dependencies.
- */
+'use strict';
+
 var env = process.env.NODE_ENV || 'development';
 
 var pkg = require('../package.json');
@@ -22,8 +21,6 @@ var logger = require('morgan');
 
 var colors = require('colors');
 var argv = require('yargs').argv;
-
-var rootPath = path.normalize(__dirname + '/../');
 
 var configJSON = require('../db/program/config-en.json');
 var oneDay = 86400000;
